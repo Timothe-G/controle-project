@@ -7,8 +7,12 @@ from pydantic import BaseModel
 app = FastAPI()
 
 # Configure the default for all requests:
+with open('key.ini', 'r') as file:
+    api_key = file.read().strip()
+
+
 client = Groq(
-    api_key=os.environ.get("GROQ_API_KEY"),
+    api_key=api_key,
     # 20 seconds (default is 1 minute)
     timeout=20.0,
     max_retries=1,

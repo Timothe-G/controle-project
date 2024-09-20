@@ -6,4 +6,4 @@ EXPOSE 5000
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-CMD ["uvicorn", "mini_groq:app", "--host", "0.0.0.0", "--port", "5000"]
+CMD ["python", "mini_groq.py"]
