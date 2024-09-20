@@ -22,11 +22,11 @@ jobs:
       - name: Install Backend Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install -r ./ci-cd/test_app/requirements.txt
+          pip install -r ./ci_cd/test_app/requirements.txt
 
       - name: Start Backend Server
         run: |
-          cd ./ci-cd/test_app
+          cd ./ci_cd/test_app
           uvicorn main:app --reload &
 
       #add some test
